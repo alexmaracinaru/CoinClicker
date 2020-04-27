@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+}
+
+#screen {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw;
+}
+
+#game {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+#game_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+}
+
+#game_elements {
+}
+
+/* positioning elements */
+
+#coin_container1 {
+  position: absolute;
+
+  top: 10vw;
+  left: 10vw;
+}
+
+#coin_container1 .sprite {
+  width: 20vw;
+  height: 20vw;
+
+  background-image: url(coin.svg);
+  background-size: 100%;
+}
+
+#coin_container2 {
+  position: absolute;
+
+  top: 15vw;
+  left: 40vw;
+}
+
+#coin_container2 .sprite {
+  width: 20vw;
+  height: 20vw;
+
+  background-image: url(coin.svg);
+  background-size: 100%;
+}
+
+#coin_container3 {
+  position: absolute;
+
+  top: 5vw;
+  left: 70vw;
+}
+
+#coin_container3 .sprite {
+  width: 20vw;
+  height: 20vw;
+
+  background-image: url(coin.svg);
+  background-size: 100%;
+}
+
+#bomb_container {
+  position: absolute;
+
+  top: 2vw;
+  left: 30vw;
+}
+
+#bomb_container .sprite {
+  width: 20vw;
+  height: 20vw;
+
+  background-image: url(bomb.svg);
+  background-size: 100%;
+}
+
+#heart_container {
+  position: absolute;
+
+  top: 25vw;
+  left: 55vw;
+}
+
+#heart_container .sprite {
+  width: 23vw;
+  height: 20vw;
+
+  background-image: url(heart.svg);
+  background-size: 100%;
+}
+
+/* Animations */
+
+/* containers can fall ... */
+.falling {
+  animation-name: falling_kf;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes falling_kf {
+  0% {
+    top: -20vw;
+  }
+  100% {
+    top: 60vw;
+  }
+}
+
+/* a clicked coin will zoom ... */
+.zoom {
+  animation-name: zoom_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.67, 0.47, 0.33, 1.46);
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_kf {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(40vw, -40vw) scale(2) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.shake {
+  animation-name: shake_kf;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes shake_kf {
+  0% {
+    background-color: transparent;
+    transform: rotate(0) scale(1);
+  }
+
+  10% {
+    background-color: rgba(255, 246, 27, 0.7);
+    transform: rotate(-5deg) scale(1.5);
+  }
+
+  50% {
+    background-color: rgba(255, 165, 0, 0.7);
+    transform: rotate(10deg) scale(1.5);
+  }
+
+  100% {
+    background-color: rgba(255, 0, 0, 0.7);
+    transform: rotate(-10deg) scale(1.5);
+  }
+}
+
+/*how the heck is this fixed??*/
+
+.explode {
+  animation-name: explosion_kf;
+  animation-duration: 1s;
+}
+
+@keyframes explode {
+    0% {transform: scale(1)
+    50% {transform: scale:}}
+}
+/* Animation modifiers */
+
+.pause {
+  animation-play-state: paused;
+}
+
+.speed1 {
+  animation-duration: 5s;
+}
+
+.speed2 {
+  animation-duration: 3s;
+}
+
+.speed3 {
+  animation-duration: 1.5s;
+}
