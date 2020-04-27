@@ -1,0 +1,50 @@
+<svg id="coin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#AI_GaussianBlur_7);
+      }
+
+      .cls-2 {
+        fill: #666;
+      }
+
+      .cls-3 {
+        fill: #ffe695;
+      }
+
+      .cls-4 {
+        fill: #ffc72e;
+      }
+
+      .cls-5 {
+        fill: #f09f01;
+      }
+
+      .cls-6 {
+        fill: #ffad01;
+      }
+
+      .cls-7 {
+        fill: #fff4bf;
+      }
+    </style>
+    <filter id="AI_GaussianBlur_7" name="AI_GaussianBlur_7">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <g id="shadow">
+    <g class="cls-1">
+      <circle class="cls-2" cx="71" cy="75" r="60"/>
+    </g>
+  </g>
+  <g id="Layer_3" data-name="Layer 3">
+    <g>
+      <circle class="cls-3" cx="65" cy="68" r="60"/>
+      <circle class="cls-4" cx="65" cy="68" r="58.5"/>
+      <circle class="cls-5" cx="65" cy="68" r="48.5"/>
+      <circle class="cls-6" cx="65" cy="68" r="47"/>
+      <path class="cls-7" d="M69.5,62.5v-12c2.59.59,5,1,7.5,3.5l5-6c-4-3.93-8.32-6.42-13-7V36H65v5c-21.5,3.5-17.5,25.5,0,30V84c-4.5-.67-8-3-11-6l-6,7a25.72,25.72,0,0,0,17,8v5h4V93C86.5,88.5,88.5,68.5,69.5,62.5Zm-5-2c-6-3-6-9,0-10Zm4,24v-12C75.3,76.27,75.71,80.26,68.5,84.5Z"/>
+    </g>
+  </g>
+</svg>
